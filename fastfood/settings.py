@@ -24,7 +24,7 @@ SECRET_KEY = 'django-insecure-annj&(xrd3w+*@o!rcutp)7w4l1o1r&bo)e-i==pnq5)0bjam=
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['crmbagdaditacademy.up.railway.app']
 
 # Application definition
 
