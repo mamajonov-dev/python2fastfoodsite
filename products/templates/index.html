@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<h1>
+    Asosiy sahifa
+    <a href="{% url 'register' %}">Register</a>
+    <a href="{% url 'login' %}">Login</a>
+    {{user}}
+
+
+</h1>
+<a href="{% url 'karzinkanikorish' %}">Karzinka</a>
+
+{% for maxsulot in productlar %}
+
+<div>
+    <img width="120" src="{{maxsulot.image.url}}">
+    {{maxsulot.name}}
+    {{maxsulot.about}}
+    {{maxsulot.price}}
+    <a href="{% url 'karkinkagaqoshish' product_id=maxsulot.id %}">Karzinkaga qoshish</a>
+</div>
+<hr>
+
+{% endfor %}
+
+</body>
+</html>

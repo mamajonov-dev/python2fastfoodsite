@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<h1>
+    Karzinka
+    <a href="{% url 'home' %}">Asosiy menu</a>
+</h1>
+
+
+{% for cart in karzinkalar %}
+<div>
+
+    maxsulot: {{cart.product}}
+    <br>
+    maxsulot narxi: {{cart.product.price}}
+    <br>
+    nechta: {{cart.count}}
+    <br>
+    vaqti: {{cart.created}}
+    <br>
+    Umumiy: {{cart.umumiysuma}}
+    <br>
+    <a href="{% url 'deletecartitem' cart_id=cart.id %}">O'chirish</a>
+</div>
+<hr>
+{% endfor %}
+
+
+<a href="{% url 'addorder' %}">add order</a>
+
+</body>
+</html>
